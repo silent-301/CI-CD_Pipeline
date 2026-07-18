@@ -77,9 +77,13 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
+            # Navigate to directory and pull latest source files
+            cd /home/ec2-user/CI-CD_Pipeline
+            git pull origin main
+            
             # Pull latest image from Docker Hub
             docker pull ${{ env.DOCKER_IMAGE }}:latest
             
             # Restart service
-            docker compose -f /home/ec2-user/CI-CD_Pipeline/docker-compose.yml down
-            docker compose -f /home/ec2-user/CI-CD_Pipeline/docker-compose.yml up -d
+            docker compose down
+            docker compose up -d
