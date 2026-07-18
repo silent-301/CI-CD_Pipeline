@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.status(200).json({
     status: "success",
-    message: "CI/CD Pipeline API is running",
+    message: "CI/CD Pipeline ",
   });
 });
 
