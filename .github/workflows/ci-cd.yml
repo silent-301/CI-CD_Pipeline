@@ -81,7 +81,5 @@ jobs:
             docker pull ${{ env.DOCKER_IMAGE }}:latest
             
             # Restart service
-            docker compose -f /docker-compose.yml down
-            docker compose -f /docker-compose.yml up -d
-
-
+            docker compose -f /home/ec2-user/CI-CD_Pipeline/docker-compose.yml down
+            docker compose -f /home/ec2-user/CI-CD_Pipeline/docker-compose.yml up -d
