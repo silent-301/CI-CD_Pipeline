@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  DOCKER_IMAGE: ${{ secrets.DOCKER_USERNAME }}/cicdpipeline
+  DOCKER_IMAGE: rehman823/cicdpilpeline
 
 jobs:
   # ─── Stage 1: Test ───────────────────────────────────────

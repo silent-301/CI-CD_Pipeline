@@ -1,5 +1,6 @@
 services:
   app:
+    image: rehman823/cicdpilpeline:latest
     build:
       context: .
       dockerfile: Dockerfile
